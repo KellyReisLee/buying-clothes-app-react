@@ -1,8 +1,7 @@
 import { useRef } from 'react';
-
+import CartModal from './CartModal.jsx';
 import { CartContext } from "../Store/shopping-cart-context";
 import { useContext } from "react";
-import CartModal from './CartModal.jsx';
 
 export default function Header() {
   const modal = useRef();
@@ -30,8 +29,6 @@ export default function Header() {
     <>
       <CartModal
         ref={modal}
-        cartItems={items}
-        onUpdateCartItemQuantity={updateQtdCart}
         title="Your Cart"
         actions={modalActions}
       />
